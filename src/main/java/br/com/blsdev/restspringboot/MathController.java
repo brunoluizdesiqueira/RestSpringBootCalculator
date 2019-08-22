@@ -25,9 +25,18 @@ public class MathController {
     @RequestMapping(value = "sum/{numberOne}/{numberTwo}", method = RequestMethod.GET)
     public Double sum(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
         if (!isNumber(numberOne) || !isNumber(numberTwo)){
-            throw new UnsupportedMathOperationException("Please set a numeric value!");
+            throw new UnsupportedMathOperationException("Por favor forneça um valor numérico!");
         }
         Double sum = convertToDouble(numberOne) + convertToDouble(numberTwo);
         return sum;
+    }
+
+    @RequestMapping(value = "sub/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double sub(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo){
+        if (!isNumber(numberOne) || !isNumber(numberTwo)){
+            throw new  UnsupportedMathOperationException("Por favor forneça um valor numérico!");
+        }
+        Double sub = convertToDouble(numberOne) - convertToDouble(numberTwo);
+        return  sub;
     }
 }
