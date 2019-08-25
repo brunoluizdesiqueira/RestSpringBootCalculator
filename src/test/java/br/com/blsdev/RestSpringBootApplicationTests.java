@@ -1,4 +1,4 @@
-package br.com.blsdev.restspringboot;
+package br.com.blsdev;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

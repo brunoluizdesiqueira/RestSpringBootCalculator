@@ -1,7 +1,7 @@
-package br.com.blsdev.restspringboot.exception.handler;
+package br.com.blsdev.exception.handler;
 
-import br.com.blsdev.restspringboot.exception.ExceptionResponse;
-import br.com.blsdev.restspringboot.exception.UnsupportedMathOperationException;
+import br.com.blsdev.exception.ExceptionResponse;
+import br.com.blsdev.exception.UnsupportedMathOperationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

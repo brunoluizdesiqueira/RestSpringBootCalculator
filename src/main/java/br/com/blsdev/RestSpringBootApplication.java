@@ -1,4 +1,4 @@
-package br.com.blsdev.restspringboot;
+package br.com.blsdev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package br.com.blsdev.restspringboot.exception;
+package br.com.blsdev.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

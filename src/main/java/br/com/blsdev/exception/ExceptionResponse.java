@@ -1,4 +1,4 @@
-package br.com.blsdev.restspringboot.exception;
+package br.com.blsdev.exception;
 
 import java.io.Serializable;
 import java.util.Date;
