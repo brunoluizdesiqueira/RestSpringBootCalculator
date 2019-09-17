@@ -1,9 +1,10 @@
-package br.com.blsdev.model;
+package br.com.blsdev.data.vo;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Person implements Serializable {
+public class PersonVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -13,7 +14,7 @@ public class Person implements Serializable {
     private String address;
     private String gender;
 
-    public Person() {
+    public PersonVO() {
     }
 
     public long getId() {
@@ -60,12 +61,12 @@ public class Person implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return id == person.id &&
-                firstName.equals(person.firstName) &&
-                lastName.equals(person.lastName) &&
-                address.equals(person.address) &&
-                gender.equals(person.gender);
+        PersonVO personVO = (PersonVO) o;
+        return id == personVO.id &&
+                Objects.equals(firstName, personVO.firstName) &&
+                Objects.equals(lastName, personVO.lastName) &&
+                Objects.equals(address, personVO.address) &&
+                Objects.equals(gender, personVO.gender);
     }
 
     @Override
