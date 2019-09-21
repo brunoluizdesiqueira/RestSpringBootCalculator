@@ -1,0 +1,9 @@
+
+ksquid:S44881"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(şÑ§·ûÿÿÿÿ8·ØÕÌ-
+fsquid:S4488!"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ú†î8·ØÕÌ-
+esquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(£Í²©8·ØÕÌ-
+ksquid:S44889"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…İéıÿÿÿÿ8·ØÕÌ-
+ksquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Í¤‘ıÿÿÿÿ8·ØÕÌ-
+fsquid:S4488)"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ªÃ¯Ç8·ØÕÌ-
+fsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ì¹œà8·ØÕÌ-
+Šsquid:S1192"gDefine a constant instead of duplicating this literal "Por favor forneÃ§a um valor numÃ©rico!" 6 times.(İûŠ·şÿÿÿÿ8·ØÕÌ-

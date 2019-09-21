@@ -1,7 +1,9 @@
 package br.com.blsdev.services;
 
 import br.com.blsdev.converter.DozerConverter;
+import br.com.blsdev.converter.custom.PersonConverter;
 import br.com.blsdev.data.vo.PersonVO;
+import br.com.blsdev.data.vo.v2.PersonVOV2;
 import br.com.blsdev.exception.ResourceNotFoundException;
 import br.com.blsdev.data.model.Person;
 import br.com.blsdev.repository.PersonRepository;
@@ -16,9 +18,17 @@ public class PersonServices {
     @Autowired
     PersonRepository repository;
 
-    public PersonVO create(PersonVO personVO) {
-        var entity = DozerConverter.parserObject(personVO, Person.class);
+    @Autowired
+    PersonConverter converter;
+
+    public PersonVO create(PersonVO person) {
+        var entity = DozerConverter.parserObject(person, Person.class);
         return DozerConverter.parserObject(repository.save(entity), PersonVO.class);
+    }
+
+    public PersonVOV2 createV2(PersonVOV2 person) {
+        var entity = converter.convertVOToEntity(person);
+        return converter.convertEntityToVO(repository.save(entity));
     }
 
     public PersonVO update(PersonVO personVO) {
