@@ -2,7 +2,7 @@ package br.com.blsdev.converter;
 
 import br.com.blsdev.converter.mocks.MockPerson;
 import br.com.blsdev.data.model.Person;
-import br.com.blsdev.data.vo.PersonVO;
+import br.com.blsdev.data.vo.v1.PersonVO;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

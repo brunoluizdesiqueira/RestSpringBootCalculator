@@ -1,7 +1,7 @@
 package br.com.blsdev.converter.mocks;
 
 import br.com.blsdev.data.model.Person;
-import br.com.blsdev.data.vo.PersonVO;
+import br.com.blsdev.data.vo.v1.PersonVO;
 
 import java.util.ArrayList;
 import java.util.List;
