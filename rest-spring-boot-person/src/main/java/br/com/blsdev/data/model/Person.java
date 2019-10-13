@@ -1,19 +1,29 @@
 package br.com.blsdev.data.model;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@Getter
+@Setter
 @Table(name="person")
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotNull(message = "O first name é obrigatório")
     @Column(name = "first_name", nullable = false, length = 80)
     private String firstName;
 
@@ -25,64 +35,4 @@ public class Person implements Serializable {
 
     @Column(nullable = false, length = 6)
     private String gender;
-
-    public Person() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return id == person.id &&
-                firstName.equals(person.firstName) &&
-                lastName.equals(person.lastName) &&
-                address.equals(person.address) &&
-                gender.equals(person.gender);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstName, lastName, address, gender);
-    }
 }
